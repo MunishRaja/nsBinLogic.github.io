@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin Sort</title>
+    <style>
+        body {
+            font-family: sans-serif, Georgia, 'Times New Roman', Times, serif;
+        }
+
+        table, th, td{
+            border: 1px solid #555555;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th {
+            background-color: #607799;
+            color: #EFF1F5;
+            font-size: 18px;
+        }
+
+        td {
+            background-color: #EFF1F5;
+            color: #555555;
+            font-size: 13px;
+            height: 15px;
+            width: 100px;
+            font-weight: bold;
+        }
+
+        input{
+            width: 100px;
+            height: 15px;
+            border: 0px;
+            outline: none;
+        }
+
+        .req{
+            border: 1px solid #555555;
+            border-radius: 3px;
+            height: 20px;
+            outline: 1px solid;
+            outline-color: #0062EB;
+            font-weight: bold;
+        }
+
+        #container{
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+            align-items: start;
+        }
+
+        #buttonDiv{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        #sortButton{
+            background-color: #0062EB;
+            color: #FFFFFF;
+            border-radius: 5px;
+            width: 100px;
+            border-color: #0062EB;
+            font-weight: bold;
+        }
+
+        #resetButton{
+            background-color: #D2D2D2;
+            color: #555555;
+            border-radius: 5px;
+            width: 100px;
+            border-color: #D2D2D2;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="inputDiv">
+            <table id="inputTable" style="width: 100%;" >
+                <thead>
+                    <tr>
+                        <th colspan="5">BIN Sequence : Input</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="1st-element">Bin No.</td>
+                        <td>Pallet No.</td>
+                        <td>Lot No.</td>
+                        <td>Quantity</td>
+                        <td>Expiry Date</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="Bin 1"></td>
+                        <td><input type="text" value="PT 2"></td>
+                        <td><input type="text" value="LT 2"></td>
+                        <td><input type="number" value="60"></td>
+                        <td><input type="date" value="2024-09-19"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="Bin 2"></td>
+                        <td><input type="text" value="PT 4"></td>
+                        <td><input type="text" value="LT 4"></td>
+                        <td><input type="number" value="90"></td>
+                        <td><input type="date" value="2024-04-10"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="Bin 3"></td>
+                        <td><input type="text" value="PT 9"></td>
+                        <td><input type="text" value="LT 9"></td>
+                        <td><input type="number" value="60"></td>
+                        <td><input type="date" value="2024-06-15"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="Bin 4"></td>
+                        <td><input type="text" value="PT 7"></td>
+                        <td><input type="text" value="LT 7"></td>
+                        <td><input type="number" value="229"></td>
+                        <td><input type="date" value="2024-09-01"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="Bin 1"></td>
+                        <td><input type="text" value="PT 4"></td>
+                        <td><input type="text" value="LT 4"></td>
+                        <td><input type="number" value="103"></td>
+                        <td><input type="date" value="2024-03-18"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="Bin 3"></td>
+                        <td><input type="text" value="PT 4"></td>
+                        <td><input type="text" value="LT 4"></td>
+                        <td><input type="number" value="60"></td>
+                        <td><input type="date" value="2024-08-30"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" value="Bin 7"></td>
+                        <td><input type="text" value="PT 1"></td>
+                        <td><input type="text" value="LT 1"></td>
+                        <td><input type="number" value="185"></td>
+                        <td><input type="date" value="2024-12-22"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="buttonDiv">
+            <input class="req" type="number">
+            <button id="sortButton">Sort BIN</button>
+            <button id="resetButton">Reset</button>
+        </div>
+        <div id="outputDiv">
+            <table id="outputTable">
+                <thead>
+                    <tr>
+                        <th colspan="5">BIN Sequence: Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bin No.</td>
+                        <td>Pallet No.</td>
+                        <td>Lot No.</td>
+                        <td>Quantity</td>
+                        <td>Expiry Date</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/Archieve/Bin_Sort/index.js"></script>
+</body>
+</html>
