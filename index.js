@@ -181,4 +181,9 @@ document.getElementById("sortButton").onclick = function(){
         cells[3].textContent = obj.qty;
         cells[4].textContent = formattedDate;
     });
+
+    var suggestedBin = [...new Set(finalArray.map(line => line.bin))];
+    suggestedBin = suggestedBin.toString().replaceAll(",",",<br>");
+
+    document.getElementById("suggestedBin").innerHTML = suggestedBin;
 }
