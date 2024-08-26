@@ -86,12 +86,13 @@
             <table id="inputTable" style="width: 100%;" >
                 <thead>
                     <tr>
-                        <th colspan="5">BIN Sequence : Input</th>
+                        <th colspan="6">BIN Sequence : Input</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="1st-element">Bin No.</td>
+                        <td>Bin Seq.</td>
                         <td>Pallet No.</td>
                         <td>Lot No.</td>
                         <td>Quantity</td>
@@ -99,6 +100,7 @@
                     </tr>
                     <tr>
                         <td><input type="text" value="Bin 1"></td>
+                        <td><input type="text" value="1"></td>
                         <td><input type="text" value="PT 2"></td>
                         <td><input type="text" value="LT 2"></td>
                         <td><input type="number" value="60"></td>
@@ -106,6 +108,7 @@
                     </tr>
                     <tr>
                         <td><input type="text" value="Bin 2"></td>
+                        <td><input type="text" value="3"></td>
                         <td><input type="text" value="PT 4"></td>
                         <td><input type="text" value="LT 4"></td>
                         <td><input type="number" value="90"></td>
@@ -113,6 +116,7 @@
                     </tr>
                     <tr>
                         <td><input type="text" value="Bin 3"></td>
+                        <td><input type="text" value="4"></td>
                         <td><input type="text" value="PT 9"></td>
                         <td><input type="text" value="LT 9"></td>
                         <td><input type="number" value="60"></td>
@@ -120,6 +124,7 @@
                     </tr>
                     <tr>
                         <td><input type="text" value="Bin 4"></td>
+                        <td><input type="text" value="2"></td>
                         <td><input type="text" value="PT 7"></td>
                         <td><input type="text" value="LT 7"></td>
                         <td><input type="number" value="229"></td>
@@ -127,6 +132,7 @@
                     </tr>
                     <tr>
                         <td><input type="text" value="Bin 1"></td>
+                        <td><input type="text" value="5"></td>
                         <td><input type="text" value="PT 4"></td>
                         <td><input type="text" value="LT 4"></td>
                         <td><input type="number" value="103"></td>
@@ -134,6 +140,7 @@
                     </tr>
                     <tr>
                         <td><input type="text" value="Bin 3"></td>
+                        <td><input type="text" value="2"></td>
                         <td><input type="text" value="PT 4"></td>
                         <td><input type="text" value="LT 4"></td>
                         <td><input type="number" value="60"></td>
@@ -141,6 +148,7 @@
                     </tr>
                     <tr>
                         <td><input type="text" value="Bin 7"></td>
+                        <td><input type="text" value="5"></td>
                         <td><input type="text" value="PT 1"></td>
                         <td><input type="text" value="LT 1"></td>
                         <td><input type="number" value="185"></td>
@@ -158,12 +166,13 @@
             <table id="outputTable">
                 <thead>
                     <tr>
-                        <th colspan="5">BIN Sequence: Output</th>
+                        <th colspan="6">BIN Sequence: Output</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Bin No.</td>
+                        <td>Bin Seq.</td>
                         <td>Pallet No.</td>
                         <td>Lot No.</td>
                         <td>Quantity</td>
@@ -175,22 +184,10 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -203,6 +200,15 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -210,8 +216,18 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -222,12 +238,6 @@
             </table>
         </div>
     </div>
-    <div>
-        <div style="margin-left: 47%;">
-            <p><b>Suggested Bins</b></p>
-            <p id="suggestedBin"></p>
-        </div>
-    </div>
-    <script src="./index.js"></script>
+    <script src="./sort.js"></script>
 </body>
 </html>
